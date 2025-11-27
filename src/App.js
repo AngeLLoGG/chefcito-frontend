@@ -132,7 +132,7 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <div className="logo-section">
-            <div className="logo">🍳</div>
+            <div className="logo">🐭</div>
             <div className="titles">
               <h1>Chefcito</h1>
               <p>Tu asistente culinario inteligente</p>

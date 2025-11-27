@@ -35,6 +35,8 @@ body {
 .App {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER MODERNO */
@@ -170,12 +172,13 @@ body {
 
 /* CONTENIDO PRINCIPAL */
 .app-main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 1;
 }
 
 /* CONTROLES MODERNOS */
@@ -513,8 +516,23 @@ body {
 
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
+  width: 100%;
+  gap: 20px;
+  /* Por defecto (PC): 3 columnas exactas */
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  .recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .recipe-card {
@@ -607,16 +625,25 @@ body {
 
 /* FOOTER MODERNO */
 .app-footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
+  background: transparent;
+  border-top: none;
+  
   padding: 1.5rem 0;
   margin-top: auto;
+  
+  opacity: 0.6; 
+  transition: opacity 0.3s ease;
+}
+
+.app-footer:hover {
+    opacity: 1;
 }
 
 .app-footer p {
   text-align: center;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 /* RESPONSIVE */
