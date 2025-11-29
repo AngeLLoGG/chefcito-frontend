@@ -1,6 +1,3 @@
-/* App.css - Chefcito Moderno v2.0 */
-
-/* Reset y variables CSS */
 :root {
   --primary: #6366f1;
   --primary-dark: #4f46e5;
@@ -39,7 +36,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER MODERNO */
 .app-header {
   background: rgba(30, 41, 59, 0.8);
   backdrop-filter: blur(20px);
@@ -123,7 +119,6 @@ body {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-/* NAVEGACIÓN MODERNA */
 .app-navigation {
   background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(10px);
@@ -131,12 +126,14 @@ body {
 }
 
 .nav-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 10px 20px;
+  overflow-x: auto;
 }
 
 .nav-btn {
@@ -166,11 +163,6 @@ body {
   box-shadow: var(--shadow);
 }
 
-.nav-icon {
-  font-size: 1.1rem;
-}
-
-/* CONTENIDO PRINCIPAL */
 .app-main {
   max-width: 1400px;
   margin: 0 auto;
@@ -181,7 +173,6 @@ body {
   flex: 1;
 }
 
-/* CONTROLES MODERNOS */
 .controls-section {
   width: 100%;
 }
@@ -206,7 +197,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* SLIDERS MODERNOS */
 .sliders-grid {
   display: flex;
   flex-direction: column;
@@ -242,93 +232,20 @@ body {
   font-size: 0.8rem;
 }
 
-/* SLIDER MUY SIMPLE */
-.simple-slider {
-  width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  background: var(--surface-light);
-  outline: none;
-  -webkit-appearance: none;
-  margin: 0.5rem 0;
-}
-
-.simple-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--primary);
-  cursor: pointer;
-  border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.simple-slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--primary);
-  cursor: pointer;
-  border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* ESCALA NUMÉRICA SIMPLE */
-.sliders-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* Reducido significativamente */
-  margin-bottom: 1rem;
-}
-
-.slider-item {
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-.slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3rem; /* Muy reducido */
-}
-
-.slider-label {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 1rem; /* Más pequeño */
-  margin: 0;
-}
-
-.slider-value {
-  background: var(--primary);
-  color: white;
-  padding: 0.15rem 0.5rem; /* Más compacto */
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.75rem; /* Más pequeño */
-  min-width: 25px;
-  text-align: center;
-}
-
-/* SLIDER COMPACTO */
 .compact-slider {
   width: 100%;
-  height: 6px; /* Más delgado */
+  height: 6px;
   border-radius: 3px;
   background: var(--surface-light);
   outline: none;
   -webkit-appearance: none;
-  margin: 0.1rem 0; /* Menos margen */
+  margin: 0.1rem 0;
 }
 
 .compact-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px; /* Más pequeño */
+  width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--primary);
@@ -347,52 +264,9 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* ESCALA NUMÉRICA COMPACTA */
-.slider-scale {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.1rem; /* Muy poco margen */
-}
-
-.scale-number {
-  color: var(--text-muted);
-  font-size: 0rem; /* Más pequeño */
-  font-weight: 500;
-}
-
-/* SEPARADOR MÁS DELGADO */
-.slider-separator {
-  height: 1px;
-  background: var(--border);
-  margin: 0.1rem 0; /* Menos espacio */
-  opacity: 0.3;
-}
-
-/* CONTROLES MÁS COMPACTOS */
-.controls-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.2rem; /* Más compacto */
-  box-shadow: var(--shadow);
-}
-
-.controls-card h2 {
-  font-size: 1.3rem; /* Un poco más pequeño */
-  margin-bottom: 0.4rem;
-  color: var(--text-primary);
-}
-
-.section-description {
-  color: var(--text-muted);
-  margin-bottom: 1rem; /* Menos espacio */
-  font-size: 0.9rem;
-}
-
-/* BOTÓN MÁS COMPACTO */
 .primary-btn {
   width: 100%;
-  padding: 0.8rem 1.5rem; /* Más compacto */
+  padding: 0.8rem 1.5rem;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   border: none;
   border-radius: var(--radius);
@@ -402,7 +276,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: var(--shadow);
-  margin-top: 0.5rem; /* Menos espacio arriba */
+  margin-top: 0.5rem;
 }
 
 .primary-btn:hover:not(:disabled) {
@@ -410,29 +284,14 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.primary-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* BÚSQUEDA MODERNA */
 .search-input-wrapper {
   position: relative;
   margin-bottom: 1.5rem;
 }
 
-.search-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
 .search-input {
   width: 100%;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 1rem 1rem 1rem 1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -447,7 +306,16 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* ESTADO Y CARGA */
+select.search-input {
+    appearance: none;
+    cursor: pointer;
+}
+
+select.search-input option {
+    background-color: var(--surface);
+    color: var(--text-primary);
+}
+
 .status-section {
   width: 100%;
 }
@@ -488,7 +356,6 @@ body {
   line-height: 1.6;
 }
 
-/* RESULTADOS MODERNOS */
 .results-section {
   width: 100%;
 }
@@ -518,7 +385,6 @@ body {
   display: grid;
   width: 100%;
   gap: 20px;
-  /* Por defecto (PC): 3 columnas exactas */
   grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
 }
@@ -623,14 +489,11 @@ body {
   transform: translateY(-1px);
 }
 
-/* FOOTER MODERNO */
 .app-footer {
   background: transparent;
   border-top: none;
-  
   padding: 1.5rem 0;
   margin-top: auto;
-  
   opacity: 0.6; 
   transition: opacity 0.3s ease;
 }
@@ -646,7 +509,6 @@ body {
   font-weight: 400;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -696,4 +558,89 @@ body {
   .recipe-card {
     padding: 1rem;
   }
+}
+
+/* --- CONSEJO DEL NUTRICIONISTA (MODO OSCURO) --- */
+.nutrition-tip {
+  /* Fondo verde semitransparente (Dark Mode Friendly) */
+  background: rgba(16, 185, 129, 0.15); 
+  border-left: 4px solid #10b981;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  /* Texto verde claro para que se lea sobre fondo oscuro */
+  color: #d1fae5; 
+  font-size: 0.9rem;
+  line-height: 1.4;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.tip-title {
+  display: block;
+  font-weight: 700;
+  color: #34d399; /* Verde brillante */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ETIQUETAS / BADGES (ESTILO TRANSLÚCIDO) --- */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Un poco más de espacio entre ellas */
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid; /* El borde tomará el color definido abajo */
+  backdrop-filter: blur(4px); /* (Opcional) Efecto borroso suave detrás */
+}
+
+/* ROJO (Advertencias: Grasa, Azúcar) */
+.bg-red {
+  background-color: rgba(239, 68, 68, 0.15); /* Rojo oscuro translúcido */
+  border-color: #ef4444;       /* Borde Rojo sólido */
+  color: #fca5a5;              /* Texto Rojo claro (para que se lea bien) */
+}
+
+/* AZUL (Proteína, Info) */
+.bg-blue {
+  background-color: rgba(59, 130, 246, 0.15); 
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+/* VERDE (Saludable, Keto) */
+.bg-green {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #6ee7b7;
+}
+
+/* NARANJA (Calorías) */
+.bg-orange {
+  background-color: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+  color: #fcd34d;
+}
+
+/* GRIS (Default) */
+.bg-gray {
+  background-color: rgba(156, 163, 175, 0.15);
+  border-color: #9ca3af;
+  color: #d1d5db;
 }
